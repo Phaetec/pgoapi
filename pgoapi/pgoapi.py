@@ -256,7 +256,7 @@ class PGoApiRequest:
             execute = False
 
             try:
-                response = request.request(self._api_endpoint, self._req_method_list, self.get_position())
+                response = request.request(self._api_endpoint, self._req_method_list, None)
             except AuthTokenExpiredException as e:
                 """
                 This exception only occures if the OAUTH service provider (google/ptc) didn't send any expiration date
